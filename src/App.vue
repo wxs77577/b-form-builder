@@ -1,28 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+    <h1>Bootstrap Form Builder</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-3">
+        <b-card header="Login">
+          <login-form></login-form>
+        </b-card>
+      </div>
+      <div class="col-md-9">
+        <b-card header="Search">
+          <search-form></search-form>
+        </b-card>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LoginForm from './demo/LoginForm'
+import SearchForm from './demo/SearchForm'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    LoginForm, SearchForm
+  },
+  data(){
+    return {
+      
+      
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
